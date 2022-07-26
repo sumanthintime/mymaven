@@ -2,7 +2,7 @@ node('built-in')
 {
     stage('ContinousDownload')
         {
-	     git branch: 'main', url: 'https://github.com/sumanthintime/maven.git'
+	     git branch: 'main', url: 'https://github.com/sumanthintime/mymaven.git'
 	         }
 		     stage('ContinousBuild')
 		         {
@@ -21,7 +21,7 @@ node('built-in')
 										       {
 										              deploy adapters: [tomcat9(credentialsId: 'e076cc35-1738-42ec-8b34-cf8eef122809', path: '', url: 'http://18.144.66.195:8080')], contextPath: 'prodapp', war: '**/*.war'
 											          }
-												  }
+ }
 
 
 
